@@ -16,7 +16,7 @@ rtmClient.on(RTM_EVENTS.TEAM_JOIN, ({ user }) => {
   webClient.im.open(user.id)
     .then(({ channel }) => {
       console.log(`Sending welcome message to ${channel.id}`);
-      return rtmClient.sendMessage('Welcome here is a small guide https://devoffuture.slack.com/files/sdmg15/F2HVBAZJR/Guide_of_new_user \n Bienvenue voici un petit guide https://devoffuture.slack.com/files/sdmg15/F2G00CFM3/Guide_du_nouveau, channel.id);
+      return rtmClient.sendMessage("Welcome + " <@user.id> + " here is a small guide https://devoffuture.slack.com/files/sdmg15/F2HVBAZJR/Guide_of_new_user \n Bienvenue voici un petit guide https://devoffuture.slack.com/files/sdmg15/F2G00CFM3/Guide_du_nouveau", channel.id);
     });
 });
 
